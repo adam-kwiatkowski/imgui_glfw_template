@@ -20,9 +20,14 @@ set(IMGUI_SOURCES
 )
 
 set(sources
-    main.cpp
-    ${IMGUI_SOURCES}
+        main.cpp
+        ${IMGUI_SOURCES}
+)
+
+set(libraries
+        glfw
+        OpenGL::GL
 )
 
 add_executable(imgui_glfw_template ${sources})
-target_link_libraries(${CMAKE_PROJECT_NAME} glfw OpenGL::GL)
+target_link_libraries(${CMAKE_PROJECT_NAME} ${libraries})
